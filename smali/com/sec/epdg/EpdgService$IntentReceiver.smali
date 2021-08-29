@@ -379,7 +379,7 @@
     .line 342
     const-string v0, "mdc.sys.enable_smff"
 
-    invoke-static {v0, v4}, Landroid/os/SemSystemProperties;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-static {v0, v4}, Landroid/os/SystemProperties;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
 
