@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "warning": "mnoname should be match with mName of class Mno(Mno.java)",
+  "warning": "Csc Customer.xml - SPCode means subset of imsi, SubsetCode means gid1",
+  "note": "M:Mno.java P:imsprofile.json C:customer.xml",
+  "mnomap": [
+    {"mccmnc": "00101", "subset": "", "gid1": "", "gid2": "", "mnoname": "GCF"}
+  ]
+}

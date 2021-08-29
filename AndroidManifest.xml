@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" android:compileSdkVersion="30" android:compileSdkVersionCodename="11" android:sharedUserId="android.uid.system" coreApp="true" package="com.sec.epdg" platformBuildVersionCode="30" platformBuildVersionName="11">
+    <permission android:name="com.sec.epdg.PERMISSION" android:protectionLevel="signatureOrSystem"/>
+    <permission android:name="com.sec.android.providers.iwlansettings.permission.READ_IWLANSETTINGS" android:protectionLevel="signatureOrSystem"/>
+    <permission android:name="com.sec.android.providers.iwlansettings.permission.WRITE_IWLANSETTINGS" android:protectionLevel="signatureOrSystem"/>
+    <permission android:name="com.sec.android.providers.mapcon.permission.READ_MAPCON" android:protectionLevel="signatureOrSystem"/>
+    <permission android:name="com.sec.android.providers.mapcon.permission.WRITE_MAPCON" android:protectionLevel="signatureOrSystem"/>
+    <permission android:name="com.sec.android.providers.simmobility.permission.READ_SIMMOBILITY" android:protectionLevel="signatureOrSystem"/>
+    <permission android:name="com.sec.android.providers.simmobility.permission.WRITE_SIMMOBILITY" android:protectionLevel="signatureOrSystem"/>
+    <permission android:name="com.tmobile.comm.RECEIVE_METRICS" android:protectionLevel="signatureOrSystem"/>
+    <uses-permission android:name="com.ipsec.client.permission.MANAGING_VPN"/>
+    <application android:allowBackup="false" android:defaultToDeviceProtectedStorage="true" android:directBootAware="true" android:extractNativeLibs="true" android:usesNonSdkApi="true">
+        <service android:enabled="true" android:exported="true" android:name=".EpdgService" android:permission="android.permission.MODIFY_PHONE_STATE" android:singleUser="true">
+            <intent-filter>
+                <action android:name="com.sec.epdg.IEpdgManager"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="this.is.my.custom.ACTION"/>
+            </intent-filter>
+        </service>
+        <provider android:authorities="iwlansettings" android:exported="true" android:name="com.sec.epdg.IWlanContentProvider.IWlanContentProvider" android:readPermission="com.sec.android.providers.iwlansettings.permission.READ_IWLANSETTINGS" android:singleUser="true" android:writePermission="com.sec.android.providers.iwlansettings.permission.WRITE_IWLANSETTINGS"/>
+        <provider android:authorities="mapconprovider" android:exported="true" android:name="com.sec.epdg.MapconContentProvider.MapconContentProvider" android:readPermission="com.sec.android.providers.mapcon.permission.READ_MAPCON" android:singleUser="true" android:writePermission="com.sec.android.providers.mapcon.permission.WRITE_MAPCON"/>
+        <provider android:authorities="simmobilitysettings" android:exported="true" android:name="com.sec.epdg.SimMobilityContentProvider.SimMobilityContentProvider" android:readPermission="com.sec.android.providers.simmobility.permission.READ_SIMMOBILITY" android:singleUser="true" android:writePermission="com.sec.android.providers.simmobility.permission.WRITE_SIMMOBILITY"/>
+        <service android:enabled="true" android:exported="true" android:name=".IwlanDataService" android:permission="android.permission.BIND_TELEPHONY_DATA_SERVICE">
+            <intent-filter>
+                <action android:name="android.telephony.data.DataService"/>
+            </intent-filter>
+        </service>
+        <service android:enabled="true" android:exported="true" android:name=".IwlanNetworkService" android:permission="android.permission.BIND_TELEPHONY_NETWORK_SERVICE">
+            <intent-filter>
+                <action android:name="android.telephony.NetworkService"/>
+            </intent-filter>
+        </service>
+        <service android:enabled="true" android:exported="true" android:name=".EpdgQualifiedNetworksService" android:permission="android.permission.BIND_TELEPHONY_DATA_SERVICE">
+            <intent-filter>
+                <action android:name="android.telephony.data.QualifiedNetworksService"/>
+            </intent-filter>
+        </service>
+        <uses-library android:name="EpdgManager" android:required="false"/>
+        <uses-library android:name="imsmanager" android:required="false"/>
+    </application>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="com.sec.phone.permission.SEC_FACTORY_PHONE"/>
+    <uses-permission android:name="com.sec.android.SAMSUNG_TUNTAP"/>
+    <uses-permission android:name="com.sec.android.SAMSUNG_MODIFY_IPTABLES"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.sec.android.providers.iwlansettings.permission.READ_IWLANSETTINGS"/>
+    <uses-permission android:name="com.sec.android.providers.iwlansettings.permission.WRITE_IWLANSETTINGS"/>
+    <uses-permission android:name="com.sec.android.providers.mapcon.permission.READ_MAPCON"/>
+    <uses-permission android:name="com.sec.android.providers.mapcon.permission.WRITE_MAPCON"/>
+    <uses-permission android:name="com.sec.android.providers.simmobility.permission.READ_SIMMOBILITY"/>
+    <uses-permission android:name="com.sec.android.providers.simmobility.permission.WRITE_SIMMOBILITY"/>
+    <uses-permission android:name="com.sec.epdg.PERMISSION"/>
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL"/>
+    <uses-permission android:name="android.permission.READ_PRECISE_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="com.sec.android.settings.permission.SOFT_RESET"/>
+    <uses-permission android:name="com.sec.android.settings.permission.NETWORK_RESET"/>
+</manifest>

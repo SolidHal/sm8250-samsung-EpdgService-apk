@@ -1,0 +1,26 @@
+Signature-Version: 1.0
+Created-By: 1.0 (Android SignApk)
+X-Android-APK-Signed: 2
+SHA-256-Digest-Manifest: MKV0nXzWHsVQyTgILVS9cHiFatNIduoWyR5R5yaKSnE=
+
+Name: assets/sim_mobility_provider.xml
+SHA-256-Digest: JqnOXmFGKIDkIUhcCu2Zk4X+PUhPyVbbxhl4yKmiCEo=
+
+Name: AndroidManifest.xml
+SHA-256-Digest: x9Vf1NFSf8/uZ7k+NB00jtajpnHqhl+SWDFKy3rmMYo=
+
+Name: res/raw/dummy.json
+SHA-256-Digest: v62fbl7QS8ntSKbIvkeuDFVuc2b1/i78msxPJ9gmunA=
+
+Name: SEC-INF/buildConfirm.crt
+SHA-256-Digest: P3ynqIdbDmwF1PsNloTMDkK1dQ1IUV/iAEjaKUKMbUg=
+
+Name: SEC-INF/buildinfo.xml
+SHA-256-Digest: RKBhoRVWskZhos8uV29j1bEgiFJc7cgXrohQBve/QfY=
+
+Name: resources.arsc
+SHA-256-Digest: WyE2ltKtL7QwoJnhLbb8yko99ukF/5nDfMnH4m19T0I=
+
+Name: classes.dex
+SHA-256-Digest: UujYKj4ivlLu2OTSXMbsBHOBvozFz6d0i7Ci6KuUiaw=
+

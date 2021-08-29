@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<simmobility version="2" >
+    <mobilitysettings>
+        
+        <!-- United States : AT&T : ATT -->
+        <mobility
+            mnoname="ATT_US"
+            video_enable="0"
+            voice_enable="0" />
+
+        <!-- United States : Verizon : VZW -->
+        <mobility
+            mnoname="VZW_US"
+            video_enable="0"
+            voice_enable="0" />
+			
+        <!-- Japan : KDDI : KDI -->
+        <mobility
+            mnoname="KDDI_JP"
+            video_enable="0"
+            voice_enable="0" />
+			
+    </mobilitysettings>
+</simmobility>
